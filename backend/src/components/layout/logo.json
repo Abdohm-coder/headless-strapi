@@ -5,20 +5,5 @@
     "description": ""
   },
   "options": {},
-  "attributes": {
-    "logoImg": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "logoText": {
-      "type": "string"
-    }
-  }
+  "attributes": {}
 }

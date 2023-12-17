@@ -1,8 +1,8 @@
-import Hero from "../components/Hero";
-import Features from "../components/Features";
-import Testimonials from "../components/Testimonials";
-import Pricing from "../components/Pricing";
-import Email from "../components/Email";
+import Hero from "../../../components/Hero";
+import Features from "../../../components/Features";
+import Testimonials from "../../../components/Testimonials";
+import Pricing from "../../../components/Pricing";
+import Email from "../../../components/Email";
 
 export function sectionRenderer(section: any, index: number) {
   switch (section.__component) {

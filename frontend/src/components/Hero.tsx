@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import HighlightedText from "./HighlightedText";
-import { getStrapiMedia } from "../utils/api-helpers";
-import { renderButtonStyle } from "../utils/render-button-style";
+import { getStrapiMedia } from "../app/[lang]/utils/api-helpers";
+import { renderButtonStyle } from "../app/[lang]/utils/render-button-style";
+import { Picture } from "@/types/generated";
 
 interface Button {
   id: string;
@@ -12,29 +13,19 @@ interface Button {
   newTab: boolean;
 }
 
-interface Picture {
-  data: {
-    id: string;
-    attributes: {
-      url: string;
-      name: string;
-      alternativeText: string;
-    };
-  };
-}
-
 interface HeroProps {
   data: {
     id: string;
     title: string;
     description: string;
-    picture: Picture;
+    featured_image: Picture;
+    wordmark?: Picture;
     buttons: Button[];
   };
 }
 
 export default function Hero({ data }: HeroProps) {
-  const imgUrl = getStrapiMedia(data.picture.data.attributes.url);
+  const imgUrl = getStrapiMedia(data.featured_image?.data?.attributes.url);
 
   return (
     <section className="dark:bg-black dark:text-gray-100">
@@ -70,7 +61,8 @@ export default function Hero({ data }: HeroProps) {
           <Image
             src={imgUrl || ""}
             alt={
-              data.picture.data.attributes.alternativeText || "none provided"
+              data.featured_image?.data?.attributes.alternativeText ||
+              "none provided"
             }
             className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 "
             width={600}

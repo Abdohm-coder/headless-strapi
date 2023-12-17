@@ -10,6 +10,12 @@ const populate = {
       picture: {
         fields: ["url", "alternativeText", "caption", "width", "height"],
       },
+      featured_image: {
+        fields: ["url", "alternativeText", "caption", "width", "height"],
+      },
+      wordmark: {
+        fields: ["url", "alternativeText", "caption", "width", "height"],
+      },
       buttons: {
         populate: true,
       },

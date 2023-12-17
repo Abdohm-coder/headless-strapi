@@ -16,7 +16,7 @@
       "type": "string",
       "required": true
     },
-    "picture": {
+    "featured_image": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -28,6 +28,29 @@
       "type": "component",
       "repeatable": true,
       "component": "links.button-link"
+    },
+    "wordmark": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "test": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tset": {
+      "type": "string",
+      "required": true
     }
   }
 }

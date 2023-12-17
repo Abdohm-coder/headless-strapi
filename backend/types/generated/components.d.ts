@@ -153,25 +153,7 @@ export interface LayoutLogo extends Schema.Component {
     displayName: 'Logo';
     description: '';
   };
-  attributes: {
-    logoImg: Attribute.Media & Attribute.Required;
-    logoText: Attribute.String;
-  };
-}
-
-export interface LayoutNavbar extends Schema.Component {
-  collectionName: 'components_layout_navbars';
-  info: {
-    name: 'Navbar';
-    displayName: 'Navbar';
-    icon: 'map-signs';
-    description: '';
-  };
-  attributes: {
-    links: Attribute.Component<'links.link', true>;
-    button: Attribute.Component<'links.button-link'>;
-    navbarLogo: Attribute.Component<'layout.logo'>;
-  };
+  attributes: {};
 }
 
 export interface LinksButtonLink extends Schema.Component {
@@ -244,6 +226,33 @@ export interface MetaMetadata extends Schema.Component {
   attributes: {
     metaTitle: Attribute.String & Attribute.Required;
     metaDescription: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface NavbarNavbarChild extends Schema.Component {
+  collectionName: 'components_links_navbar_children';
+  info: {
+    displayName: 'Navbar Child';
+    description: '';
+  };
+  attributes: {
+    label: Attribute.String & Attribute.Required;
+    description: Attribute.String;
+    url: Attribute.String & Attribute.Required;
+    picture: Attribute.Media;
+    is_external: Attribute.Boolean;
+  };
+}
+
+export interface NavbarNavbarItem extends Schema.Component {
+  collectionName: 'components_navbar_navbar_items';
+  info: {
+    displayName: 'Navbar Item';
+    description: '';
+  };
+  attributes: {
+    label: Attribute.String;
+    children: Attribute.Component<'navbar.navbar-child', true>;
   };
 }
 
@@ -321,8 +330,11 @@ export interface SectionsHero extends Schema.Component {
   attributes: {
     title: Attribute.String & Attribute.Required;
     description: Attribute.String & Attribute.Required;
-    picture: Attribute.Media & Attribute.Required;
+    featured_image: Attribute.Media & Attribute.Required;
     buttons: Attribute.Component<'links.button-link', true>;
+    wordmark: Attribute.Media & Attribute.Required;
+    test: Attribute.Media & Attribute.Required;
+    tset: Attribute.String & Attribute.Required;
   };
 }
 
@@ -487,12 +499,13 @@ declare module '@strapi/types' {
       'elements.testimonial': ElementsTestimonial;
       'layout.footer': LayoutFooter;
       'layout.logo': LayoutLogo;
-      'layout.navbar': LayoutNavbar;
       'links.button-link': LinksButtonLink;
       'links.button': LinksButton;
       'links.link': LinksLink;
       'links.social-link': LinksSocialLink;
       'meta.metadata': MetaMetadata;
+      'navbar.navbar-child': NavbarNavbarChild;
+      'navbar.navbar-item': NavbarNavbarItem;
       'sections.bottom-actions': SectionsBottomActions;
       'sections.feature-columns-group': SectionsFeatureColumnsGroup;
       'sections.feature-rows-group': SectionsFeatureRowsGroup;
