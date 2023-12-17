@@ -36,21 +36,6 @@
       "allowedTypes": [
         "images"
       ]
-    },
-    "test": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "tset": {
-      "type": "string",
-      "required": true
     }
   }
 }

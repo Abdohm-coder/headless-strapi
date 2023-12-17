@@ -1,13 +1,14 @@
-import Hero from "../../../components/Hero";
 import Features from "../../../components/Features";
 import Testimonials from "../../../components/Testimonials";
 import Pricing from "../../../components/Pricing";
 import Email from "../../../components/Email";
+import Hero from "@/components/Hero";
 
 export function sectionRenderer(section: any, index: number) {
+  console.log(section)
   switch (section.__component) {
     case "sections.hero":
-      return <Hero key={index} data={section} />;
+      return <Hero key={index} heroSection={section} />;
     case "sections.features":
       return <Features key={index} data={section} />;
     case "sections.testimonials-group":

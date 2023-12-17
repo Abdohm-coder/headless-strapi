@@ -11,7 +11,6 @@ export function Navbar({
   links: Array<INavbarLinks>;
   logoUrl: string | null;
 }) {
-  console.log(links)
   return (
     <header className="w-screen">
       <nav className="container h-32">

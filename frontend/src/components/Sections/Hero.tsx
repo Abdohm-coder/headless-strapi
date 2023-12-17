@@ -1,17 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import HighlightedText from "./HighlightedText";
-import { getStrapiMedia } from "../app/[lang]/utils/api-helpers";
-import { renderButtonStyle } from "../app/[lang]/utils/render-button-style";
-import { Picture } from "@/types/generated";
-
-interface Button {
-  id: string;
-  url: string;
-  text: string;
-  type: string;
-  newTab: boolean;
-}
+import HighlightedText from "../HighlightedText";
+import { getStrapiMedia } from "../../app/[lang]/utils/api-helpers";
+import { renderButtonStyle } from "../../app/[lang]/utils/render-button-style";
+import { Button, Picture } from "@/types/generated";
 
 interface HeroProps {
   data: {

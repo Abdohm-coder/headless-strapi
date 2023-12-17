@@ -333,8 +333,6 @@ export interface SectionsHero extends Schema.Component {
     featured_image: Attribute.Media & Attribute.Required;
     buttons: Attribute.Component<'links.button-link', true>;
     wordmark: Attribute.Media & Attribute.Required;
-    test: Attribute.Media & Attribute.Required;
-    tset: Attribute.String & Attribute.Required;
   };
 }
 

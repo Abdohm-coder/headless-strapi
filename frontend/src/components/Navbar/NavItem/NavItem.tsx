@@ -25,7 +25,7 @@ export const NavItem: FC<IProps> = ({ data }) => {
         const image = getStrapiMedia(picture?.data?.attributes.url);
 
         return is_external ? (
-          <a
+          <a key={label}
             target={"_blank"}
             rel="noreferrer"
             className="p-2 rounded-xl hover:bg-black/5 transition-all duration-300"
@@ -41,7 +41,7 @@ export const NavItem: FC<IProps> = ({ data }) => {
             </div>
           </a>
         ) : (
-          <Link
+          <Link key={label}
             className="p-2 rounded-xl hover:bg-black/5 transition-all duration-300"
             href={url}
           >
