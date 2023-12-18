@@ -5,11 +5,10 @@ import Email from "../../../components/Email";
 import Hero from "@/components/Hero";
 
 export function sectionRenderer(section: any, index: number) {
-  console.log(section)
   switch (section.__component) {
     case "sections.hero":
       return <Hero key={index} heroSection={section} />;
-    case "sections.features":
+    case "sections.feature-rows-group":
       return <Features key={index} data={section} />;
     case "sections.testimonials-group":
       return <Testimonials key={index} data={section} />;

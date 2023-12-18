@@ -58,23 +58,23 @@ export default async function RootLayout({
 
   return (
     <html lang={params.lang}>
-      <body>
+      <body className="overflow-x-hidden">
         <Navbar links={links} logoUrl={navbarLogoUrl} />
 
-        <main className=" min-h-screen">
+        <main className=" min-h-screen max-w-full overflow-x-hidden flex flex-col gap-y-36 py-7">
           {children}
         </main>
 
         <Banner data={notificationBanner} />
 
-        <Footer
+        {/* <Footer
           logoUrl={footerLogoUrl}
           logoText={footer?.footerLogo?.logoText}
           menuLinks={footer?.menuLinks}
           categoryLinks={footer?.categories.data}
           legalLinks={footer?.legalLinks}
           socialLinks={footer?.socialLinks}
-        />
+        /> */}
       </body>
     </html>
   );

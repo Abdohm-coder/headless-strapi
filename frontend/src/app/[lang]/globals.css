@@ -99,3 +99,30 @@
     margin-left: -27%;
   }
 }
+
+.grid-item-0 {
+  grid-area: grid-item-0;
+}
+
+.grid-item-1 {
+  grid-area: grid-item-1;
+}
+
+.grid-item-2 {
+  grid-area: grid-item-2;
+}
+
+.grid-item-3 {
+  grid-area: grid-item-3;
+}
+
+.grid-item-4 {
+  grid-area: grid-item-4;
+}
+
+.grid-items {
+  grid-template-areas: 
+    "grid-item-0 grid-item-0 grid-item-0 grid-item-0 grid-item-0 grid-item-0 grid-item-0 grid-item-1 grid-item-1 grid-item-1 grid-item-1 grid-item-1"
+    "grid-item-2 grid-item-2 grid-item-2 grid-item-2 grid-item-2 grid-item-4 grid-item-4 grid-item-4 grid-item-4 grid-item-4 grid-item-4 grid-item-4"
+    "grid-item-3 grid-item-3 grid-item-3 grid-item-3 grid-item-3 grid-item-4 grid-item-4 grid-item-4 grid-item-4 grid-item-4 grid-item-4 grid-item-4"
+}
