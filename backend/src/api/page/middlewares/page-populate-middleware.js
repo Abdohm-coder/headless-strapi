@@ -27,6 +27,14 @@ const populate = {
           },
         },
       },
+      features: {
+        populate: {
+          fields: ["title", "description", "link"],
+          media: {
+            fields: ["url", "alternativeText", "caption", "width", "height"],
+          },
+        },
+      },
       testimonials: {
         populate: {
           picture: {

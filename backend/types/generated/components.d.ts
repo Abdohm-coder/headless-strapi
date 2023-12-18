@@ -27,7 +27,8 @@ export interface ElementsFeatureRow extends Schema.Component {
     title: Attribute.String & Attribute.Required;
     description: Attribute.Text;
     media: Attribute.Media & Attribute.Required;
-    link: Attribute.Component<'links.link'>;
+    link: Attribute.String & Attribute.Required;
+    is_text_white: Attribute.Boolean;
   };
 }
 

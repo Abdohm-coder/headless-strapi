@@ -25,9 +25,11 @@
       ]
     },
     "link": {
-      "type": "component",
-      "repeatable": false,
-      "component": "links.link"
+      "type": "string",
+      "required": true
+    },
+    "is_text_white": {
+      "type": "boolean"
     }
   }
 }

@@ -33,8 +33,8 @@ export const Hero: FC<{ heroSection: IHero }> = ({ heroSection }) => {
               height={25}
             />
           )}
-          <h2 className="text-6xl font-medium">{title}</h2>
-          <p className="text-white/60 text-center text-xl tracking-tight">
+          <h2 className="md:text-6xl text-4xl font-medium text-center">{title}</h2>
+          <p className="text-white/60 text-center md:text-xl text-lg tracking-tight">
             {description}
           </p>
           {/* <span className="text-xl font-medium">{heroAvailable}</span> */}
